@@ -37,4 +37,6 @@ router.post('/notes', (req, res) => {
 
 })
 
+// deletes note
+
 module.exports = router
