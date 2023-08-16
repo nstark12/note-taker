@@ -39,9 +39,18 @@ router.post('/notes', (req, res) => {
 
 // deletes note
 router.delete('/notes/:id', (req, res) => {
+    // const notes = readAndParseFile(dataPath)
+    // notes.splice(req.params.id, 1)
+    // writeFileSync(dataPath, JSON.stringify(notes, null, 2))
+    const id = req.params.id
     const notes = readAndParseFile(dataPath)
-    notes.splice(req.params.id, 1)
-    writeFileSync(dataPath, JSON.stringify(notes, null, 2))
+    notes.splice(id - 1, 1)
+    notes.forEach((obj, i) => {
+        obj.id = i + 1
+    })
+    writeFileSync(dataPath, JSON.stringify(notes))
+    res.json(notes)
+
 })
 
 module.exports = router
