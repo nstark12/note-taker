@@ -5,7 +5,7 @@
 This is an application designed for a user to write, save, and delte notes. This application has both a front-end and a back-end environment.
 
 ## Live Application
-Link to live application: 
+Link to live application: https://express-simple-note-taker-7dad730c8ea4.herokuapp.com/ 
 
 ## Installation 
 
